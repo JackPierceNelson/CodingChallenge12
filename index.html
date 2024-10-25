@@ -1,27 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Drawing Application</title>
+    
+    <!--Task 1: Setup HTML structure-->
+    <title>Interactive Drawing Application</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
-    <canvas id="myCanvas" width="500" height="400"></canvas>
+    <canvas id="drawingCanvas" width="800" height="600"></canvas>
 
     <div>
+        <h3>Drawing Tools:</h3>
+        <input type="radio" id="lineTool" name="drawingTool" value="line" checked>
+        <label for="lineTool">Line</label>
 
-    <input type="radio" id="lines" name="drawingTool" value="line" checked>
-    <label for="lines">Line</label>
-    <input type="radio" id="rectangles" name="drawingTool" value="rectangle" checked>
-    <label for="rectangles">Rectangle</label>
-    <input type="radio" id="circles" name="drawingTool" value="circle" checked>
-    <label for="circles">Circle</label>
+        <input type="radio" id="rectangleTool" name="drawingTool" value="rectangle" checked>
+        <label for="rectangleTool">rectangle</label>
+
+        <input type="radio" id="circleTool" name="drawingTool" value="circle" checked>
+        <label for="circleTool">circle</label>
     </div>
 
     <div>
-    <label for="colorType">Color</label>
-    <input type="color" id="colorType" value="#0000000">
+        <label for="colorPicker">Color:</label>
+        <input type="color" id="colorPicker" value="#000000">
     </div>
-    <button id="clear">Clear</button>
-    
+
+    <button id="clearCanvas">Clear Canvas</button>
+
     <script src="app.js"></script>
 </body>
 </html>
